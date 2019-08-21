@@ -27,7 +27,9 @@ class ColorPaletteViewController: UIViewController {
     
     var currentColors = ColorsData.initialColors
     
-    var currentColor: UIColor = .white
+    var currentColor: UIColor?
+    
+    var tracker: Int = 0
     
     
     override func viewDidLoad() {
@@ -38,6 +40,9 @@ class ColorPaletteViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        if let currentColor = currentColor{
+            currentColors[tracker] = currentColor
+        }
         colorPaletteTableView.reloadData()
     }
     
@@ -48,9 +53,12 @@ class ColorPaletteViewController: UIViewController {
      
         settingsVC.initialChosenColor = currentColors[indexPath.row]
         
-//        settingsVC.delegate = selectedColor
-    }
+        tracker = indexPath.row
 
+        settingsVC.delegate = self
+        
+    }
+    
 }
 
 extension ColorPaletteViewController: UITableViewDataSource, UITableViewDelegate {
