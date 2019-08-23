@@ -41,25 +41,23 @@ class SettingsViewController: UIViewController {
         updateEverthing()
 
     }
-    @IBAction func changeRedValue(_ sender: UISlider) {
-        redValue = CGFloat(sender.value)
+    @IBAction func sliderChangeColorValue(_ sender: UISlider) {
+        switch sender.tag {
+        case 0:
+            redValue = CGFloat(sender.value)
+        case 1:
+            greenValue = CGFloat(sender.value)
+        case 2:
+            blueValue = CGFloat(sender.value)
+        case 3:
+            alphaValue = CGFloat(sender.value)
+        default:
+            fatalError()
+        }
+        
         updateColor()
     }
     
-    @IBAction func changeGreenValue(_ sender: UISlider) {
-        greenValue = CGFloat(sender.value)
-        updateColor()
-    }
-    
-    @IBAction func changeBlueValue(_ sender: UISlider) {
-        blueValue = CGFloat(sender.value)
-        updateColor()
-    }
-    
-    @IBAction func changeAlphaValue(_ sender: UISlider) {
-        alphaValue = CGFloat(sender.value)
-        updateColor()
-    }
 
     func updateColor(){
         newColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue)

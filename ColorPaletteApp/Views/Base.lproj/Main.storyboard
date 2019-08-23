@@ -63,54 +63,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oOP-E7-Ypv">
-                                <rect key="frame" x="52" y="532" width="310" height="310"/>
+                                <rect key="frame" x="38" y="504" width="338" height="338"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5E-17-lrp" userLabel="Red">
-                                        <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HeI-Q1-YAN">
-                                        <rect key="frame" x="-2" y="40" width="314" height="31"/>
+                                        <rect key="frame" x="-2" y="43.5" width="342" height="34.5"/>
                                         <connections>
-                                            <action selector="changeRedValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="A15-rX-GdJ"/>
+                                            <action selector="sliderChangeColorValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="Gkz-h2-2lT"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPM-Th-EF1" userLabel="Green">
-                                        <rect key="frame" x="0.0" y="80" width="310" height="30"/>
+                                        <rect key="frame" x="0.0" y="87" width="338" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-zS-qpf">
-                                        <rect key="frame" x="-2" y="120" width="314" height="31"/>
+                                    <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-zS-qpf">
+                                        <rect key="frame" x="-2" y="130.5" width="342" height="34.5"/>
                                         <connections>
-                                            <action selector="changeGreenValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="t9B-3g-bFa"/>
+                                            <action selector="sliderChangeColorValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="Md5-rP-huQ"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IN2-p9-Pv1" userLabel="Blue">
-                                        <rect key="frame" x="0.0" y="160" width="310" height="30"/>
+                                        <rect key="frame" x="0.0" y="174" width="338" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k1X-6s-aVh">
-                                        <rect key="frame" x="-2" y="200" width="314" height="31"/>
+                                    <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k1X-6s-aVh">
+                                        <rect key="frame" x="-2" y="217.5" width="342" height="34.5"/>
                                         <connections>
-                                            <action selector="changeBlueValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="c0r-mu-CP3"/>
+                                            <action selector="sliderChangeColorValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="lIW-8l-ifM"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzv-vy-750" userLabel="Alpha">
-                                        <rect key="frame" x="0.0" y="240" width="310" height="30"/>
+                                        <rect key="frame" x="0.0" y="261" width="338" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Q9-Ad-knj">
-                                        <rect key="frame" x="-2" y="280" width="314" height="31"/>
+                                    <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Q9-Ad-knj">
+                                        <rect key="frame" x="-2" y="304.5" width="342" height="34.5"/>
                                         <connections>
-                                            <action selector="changeAlphaValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="YQX-C3-JLP"/>
+                                            <action selector="sliderChangeColorValue:" destination="RnM-ju-YCQ" eventType="valueChanged" id="hgj-7W-KBj"/>
                                         </connections>
                                     </slider>
                                 </subviews>
