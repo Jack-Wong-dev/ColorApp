@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController {
     
     var delegate: ColorChangeable?
     
-    var initialChosenColor: UIColor?
+    var selectedColor: UIColor?
     
     var redValue: CGFloat = 0.5
     var greenValue: CGFloat = 0.5
@@ -37,7 +37,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        newColor = initialChosenColor
+        newColor = selectedColor
         newColor.getRed(&redValue, green: &greenValue, blue: &blueValue, alpha: &alphaValue)
         updateBKGDColor()
         updateSliderValues()
