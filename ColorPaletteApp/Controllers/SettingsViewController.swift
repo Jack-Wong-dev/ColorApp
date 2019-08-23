@@ -28,7 +28,8 @@ class SettingsViewController: UIViewController {
     var newColor: UIColor! {
         didSet {
             delegate?.changeColor(to: newColor)
-            updateEverthing()
+            updateBKGDColor()
+            updateSliderValues()
         }
     }
     
@@ -38,7 +39,8 @@ class SettingsViewController: UIViewController {
 
         newColor = initialChosenColor
         newColor.getRed(&redValue, green: &greenValue, blue: &blueValue, alpha: &alphaValue)
-        updateEverthing()
+        updateBKGDColor()
+        updateSliderValues()
 
     }
     @IBAction func sliderChangeColorValue(_ sender: UISlider) {
@@ -64,14 +66,17 @@ class SettingsViewController: UIViewController {
     }
     
     
-    func updateEverthing() {
+    func updateBKGDColor() {
         if let newColor = newColor {
             view.backgroundColor = newColor
+        }
+    }
+        
+    func updateSliderValues() {
             redSlider.value = Float(redValue)
             greenSlider.value = Float(greenValue)
             blueSlider.value = Float(blueValue)
             alphaSlider.value = Float(alphaValue)
-        }
     }
     
     
